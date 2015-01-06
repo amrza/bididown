@@ -1,0 +1,3 @@
+[submodule "js/marked"]
+	path = js/marked
+	url = https://github.com/chjj/marked.git

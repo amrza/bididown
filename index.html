@@ -1,0 +1,53 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+<title>BidiDown Editor</title>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="keywords" content="BidiDown, Markdown, Editor, bidirectional, LTR, RTL">
+<meta name="author" content="Amirreza Gh (amirrezaghaderi.ir)">
+<meta name="description" content="BidiDown: A Markdown editor whichs supports bidirectional editing.">
+<link rel="stylesheet" href="css/bididown.css">
+</head>
+
+<body style="margin:0; padding:0;">
+<div id="page" class="site">
+<div class="site-content">
+	<div style="max-width:850px; margin:0 auto; padding:20px 0;">
+		<h1 style="padding: 0px;">BidiDown: Bidirectional Markdown editor.</h1>
+		<div style="display:inline-block; width: 45%; vertical-align :top">
+			<p><strong>L:</strong> Create a new LTR block.</p>
+			<p><strong>R:</strong> Create a new RTL block.</p>
+			<p><strong>T:</strong> Toggle, change the direction of current block.</p>
+			<p><strong>D:</strong> Delete the current block.</p>
+		</div>
+		<div style="display:inline-block;width: 45%; vertical-align :top">
+			<p><strong>S:</strong> Save, locally.</p>
+			<p><strong>O:</strong> Open, open a markj document.</p>
+			<p><strong>H:</strong> HTML, shows the result in a new seprate window.</p>
+		</div>
+	</div>
+
+	<div id="bddn-wrapper" class="bddn-wrapper">
+	<!-- editor goes here -->
+	</div>
+</div>
+<div class="footer">
+  <p>BidiDown Editor by <a href="http://amirrezaghaderi.ir">Amirreza Ghaderi</a></p>
+  <p>Markdown engine by <a href="http://github.com/chjj/marked">marked.js</a></p>
+</div>
+
+</div><!-- page -->
+
+<script src="js/marked/marked.min.js"></script>
+<script src="js/bididown.js"></script>
+<script>
+
+  var editor = BidiDown.newEditor();
+  BidiDown.init(editor, "bddn-wrapper", "rtl");
+
+</script>
+</body>
+</html>
